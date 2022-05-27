@@ -1,5 +1,7 @@
 # Bot para Discord
 
+### Add new command
+
 Edit <a href='src/bot/command/basics.py'>`src/bot/command/basics.py`</a> to add new simple commands (no arguments). They will be loaded automatically when you start the bot
 ```python
 # simple command example
@@ -13,19 +15,24 @@ async def new_command(ctx):
 ...
 ```
 
-### Start
+### Execute
 
-clone project
+1. clone project
 * `git clone https://github.com/luisbarrasandoval/discord_bot`
 * `cd discord_bot`
 
-install pipenv
+2. install pipenv
 * `pip3 install pipenv`
 * `pipenv shell`
 
-install dependencies
+3. install dependencies
 * `pipenv install`
 
-Run
+4. change token in `src/config.py`
+```python
+TOKEN = 'YOUR TOKEN'
+```
+
+5. Run
 * `cd src && python3 main.py`
 
