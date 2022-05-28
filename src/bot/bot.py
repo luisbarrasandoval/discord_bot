@@ -15,6 +15,7 @@ async def on_ready():
     logging.info(f'Logged in as {bot.user.name}, id={bot.user.id}')
 
 
-for command in [x for x in dir(basics) if not x.startswith('__')]:
-    command = getattr(basics, command)
-    bot.command(command.__name__)(command)
+for command in dir(basics):
+    if not command.startswith('__'):
+        command = getattr(basics, command)
+        bot.command(command.__name__)(command)
