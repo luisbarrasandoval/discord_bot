@@ -3,3 +3,4 @@ logs/*
 src/__pycache__/*
 src/bot/command/basics/__pycache__/*
 src/bot/__pycache__/*
+src/bot/middleware/__pycache__/*
