@@ -1,18 +1,21 @@
-# Bot para Discord
+# Bot for Discord
 
 ### Add new command
 
-Edit <a href='src/bot/command/basics.py'>`src/bot/command/basics.py`</a> to add new simple commands (no arguments). They will be loaded automatically when you start the bot
+Each command is a .py file that will be loaded dynamically when the bot starts. the command function must have the same file name.
+<br>
+Example: `hello.py`
 ```python
 # simple command example
 async def hello(ctx):
     username = ctx.message.author.name
     await ctx.send(f'Hello {username}!')
+```
 
-async def new_command(ctx):
-    await ctx.send(f'response new command')
-
-...
+The `setting.py` file defines the list of `COMMAND` directories, the bot will look for commands in those folders
+```python
+DESCRIPTION = 'Mi primer bot de discord'
+COMMANDS = ['bot/command/basics/']
 ```
 
 ### Execute
