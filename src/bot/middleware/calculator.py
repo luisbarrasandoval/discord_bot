@@ -1,3 +1,6 @@
+__AUTHOR__ = 'LFBS'
+__DESCRIPTION__ = 'Calculadora simple'
+
 import re
 REGEX = '([-+]?[0-9]*\.?[0-9]+[\/\+\-\*])+([-+]?[0-9]*\.?[0-9]+)'
 

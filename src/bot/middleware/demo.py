@@ -1,5 +1,9 @@
-keywords = ['python', 'java', 'c#', 'node', 'javascript']
+__AUTHOR__ = 'LFBS'
+__DESCRIPTION__ = 'Muestra dependiendo del mensaje que se le pase'
 
+
+keywords = ['python', 'java', 'c#', 'node', 'javascript']
 async def demo(bot, message):
-    if any(word in message.content.lower() for word in keywords):
-        await message.channel.send(f'sabes {message.author.mention}, yo tambien tengo algo de programador')
+    m = message.content.lower()
+    if "oferta" in m and  any(word in m for word in keywords):
+        await message.channel.send(f'{message.author.mention} a publicado una oferta de trabajo')
